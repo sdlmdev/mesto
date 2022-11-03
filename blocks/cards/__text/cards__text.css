@@ -2,9 +2,14 @@
   padding: 0;
   max-width: 246px;
   max-height: 23px;
-  margin: 25px 20px;
+  margin: 25px 20px 31px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
+
+@media screen and (max-width: 596px) {
+  .cards__text {
+    margin: 28px 21px 29px;
+  }
+}  

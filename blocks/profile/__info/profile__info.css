@@ -6,15 +6,17 @@
   width: 100%;
   display: grid;
   grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
-  gap: 16px 18px;
+  gap: 8px 18px;
   align-items: baseline;
 }
 
 @media screen and (max-width: 596px) {
   .profile__info {
-    gap: 14px 10px;
+    gap: 8px 10px;
     max-width: 282px;
-    margin: 0 auto 36px;
+    margin: 0 auto 32px;
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 }

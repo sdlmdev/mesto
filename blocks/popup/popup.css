@@ -8,11 +8,4 @@
   display: none;
   flex-direction: column;
   align-items: center;
-  padding-top: 195px;
-}
-
-@media screen and (max-width: 596px) {
-  .popup {
-    padding-top: 123px;
-  }
 }
