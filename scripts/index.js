@@ -3,8 +3,8 @@ const editElem = document.querySelector('.profile__editor');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 const formElement = document.querySelector('.popup__form');
-const nameInput = formElement.querySelector('.popup__input-username');
-const descriptionInput = formElement.querySelector('.popup__input-description');
+const nameInput = formElement.querySelector('.popup__input_content_username');
+const descriptionInput = formElement.querySelector('.popup__input_content_description');
 const popupClose = popupElem.querySelector('.popup__close');
 
 function onOpen(popup) {
@@ -24,9 +24,12 @@ function formSubmitHandler (evt) {
 }
 
 editElem.addEventListener('click', () => {
+  nameInput.value = profileName.textContent;
+  descriptionInput.value = profileDescription.textContent;
+
   onOpen(popupElem);
 });
 
+popupClose.addEventListener('click', () => onClose(popupElem));
 formElement.addEventListener('submit', formSubmitHandler);
 
-popupClose.addEventListener('click', formSubmitHandler);
