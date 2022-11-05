@@ -9,6 +9,9 @@ const popupClose = popupElem.querySelector('.popup__close');
 
 function onOpen(popup) {
   popup.classList.add('popup_opened');
+
+  nameInput.value = profileName.textContent;
+  descriptionInput.value = profileDescription.textContent;
 }
 
 function onClose(popup) {
@@ -20,13 +23,11 @@ function formSubmitHandler (evt) {
 
   profileName.textContent = nameInput.value;
   profileDescription.textContent = descriptionInput.value;
+  
   onClose(popupElem);
 }
 
 editElem.addEventListener('click', () => {
-  nameInput.value = profileName.textContent;
-  descriptionInput.value = profileDescription.textContent;
-
   onOpen(popupElem);
 });
 
