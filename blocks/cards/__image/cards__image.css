@@ -3,4 +3,6 @@
   border-radius: 10px 10px 0 0;
   width: 100%;
   display: block;
+  aspect-ratio: 1/1;
+  cursor: pointer;
 }
