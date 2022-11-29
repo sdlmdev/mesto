@@ -94,12 +94,18 @@ popupsContainer.forEach((element) => {
 
 profileAddBtn.addEventListener('click', () => {
   openPopup(popupAddCard);
+  hideInputError(popupAddCard, popupInputName, settings.inputErrorClass);
+  hideInputError(popupAddCard, popupInputLink, settings.inputErrorClass);
+  disableButton(popupButtonCreate);
 
   popupCardForm.reset();
 });
 
 editElem.addEventListener('click', () => {
   openPopup(profilePopup);
+  hideInputError(profilePopup, nameInput, settings.inputErrorClass);
+  hideInputError(profilePopup, descriptionInput, settings.inputErrorClass);
+  disableButton(popupButtonSave);
 
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileDescription.textContent;
@@ -120,18 +126,4 @@ formElement.addEventListener('submit', (evt) => {
   profileDescription.textContent = descriptionInput.value;
 
   closePopup(profilePopup);
-});
-
-document.addEventListener('click', (evt) => {
-  if(evt.target.classList.contains('profile__editor')) {
-    hideInputError(profilePopup, nameInput);
-    hideInputError(profilePopup, descriptionInput);
-    disableButton(popupButtonSave);
-  }
-
-  if(evt.target.classList.contains('profile__add')) {
-    hideInputError(popupAddCard, popupInputName);
-    hideInputError(popupAddCard, popupInputLink);
-    disableButton(popupButtonCreate);
-  }
 });
