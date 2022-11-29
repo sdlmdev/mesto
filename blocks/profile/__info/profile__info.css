@@ -16,7 +16,5 @@
     max-width: 282px;
     margin: 0 auto 32px;
     justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
   }
 }
