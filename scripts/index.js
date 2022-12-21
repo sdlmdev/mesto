@@ -76,7 +76,7 @@ formElement.addEventListener('submit', (evt) => {
 });
 
 const editFormValidator = new FormValidator(settings, formElement);
-const addFormValidator = new FormValidator(settings, formElement);
+const addFormValidator = new FormValidator(settings, popupCardForm);
 
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
