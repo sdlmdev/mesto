@@ -5,4 +5,6 @@
   display: block;
   aspect-ratio: 1/1;
   cursor: pointer;
+  background-color: black;
+  color: white;
 }
