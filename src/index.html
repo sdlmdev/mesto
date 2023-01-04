@@ -6,17 +6,16 @@
   <meta name="description" content="Место">
   <meta name="keywords" content="Карачаевск, Гора Эльбрус, Домбай">
   <meta name="author" content="Михаил Седлачек">
-  <link rel="stylesheet" href="./pages/index.css">
   <title>Mesto</title>
 </head>
 <body class="body">
   <div class="page">
     <header class="header">
-      <img src="./images/logo.svg" class="header__logo" alt="Место">
+      <img src="<%=require('./images/logo.svg')%>" class="header__logo" alt="Место">
     </header>
     <main class="main">
       <section class="profile">
-        <img src="./images/jak.jpg" alt="Жак-Ив Кусто" class="profile__avatar">
+        <img src="<%=require('./images/jak.jpg')%>" alt="Жак-Ив Кусто" class="profile__avatar">
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button class="profile__editor" type="button"></button>
@@ -80,6 +79,5 @@
       </div>
     </article>
   </template>
-  <script type="module" src="./scripts/index.js" defer></script>
 </body>
 </html>
