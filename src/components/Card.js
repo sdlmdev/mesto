@@ -29,16 +29,16 @@ export default class Card {
     this._newCard = null;
   }
 
-  _handleLikeCard(evt) {
-    evt.target.classList.toggle('cards__like_active');
+  _handleLikeCard() {
+    this._buttonLike.classList.toggle('cards__like_active');
   }
 
   _setEventListeners() {
     this._newCard.querySelector('.cards__delete')
     .addEventListener('click', () => this._handleDeleteCard());
 
-    this._newCard.querySelector('.cards__like')
-    .addEventListener('click', this._handleLikeCard);
+    this._buttonLike = this._newCard.querySelector('.cards__like');
+    this._buttonLike.addEventListener('click', () => this._handleLikeCard());
 
     this._cardsImage.addEventListener('click', () => {
       this._handleCardClick(this._name, this._link);
