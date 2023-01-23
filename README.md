@@ -1,5 +1,5 @@
 # Проект: Место
-[Проект](https://touristonamission.github.io/mesto/) 
+[Проект](https://sdlmdev.github.io/mesto/) 
 
 ## Описание
 Проектная работа курса «Веб-разработчик» от «Яндекс Практикум».
