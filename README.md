@@ -20,6 +20,7 @@
 * Media queries;
 * ООП;
 * Webpack;
+* API (GET, POST, PATCH, PUT, DELETE);
 
 #### Планы по доработке проекта
 * Добавить английскую версию сайта;
