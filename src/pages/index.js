@@ -88,7 +88,7 @@ popupEditForm.setEventListeners();
 const popupEditAvatar = new PopupWithForm('.popup-avatar', {
   handlerPopupSubmit: data => {
     popupEditAvatar.setProcessStatus(true);
-    api.changeAvatar({avatar: data.link}).then(data => {
+    api.changeAvatar({avatar: data.avatar}).then(data => {
       userInfo.setUserAvatar(data.avatar);
     })
     .catch(err => console.log(err))
