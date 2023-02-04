@@ -31,14 +31,16 @@ function createCard(data) {
       popupConfirm.open(card);
     },
     handleLikeCard: () => {
-      api.putLikeCard(card._id).then(res => {
+      api.putLikeCard(card._id)
+      .then(res => {
         card.getCountLikes(res);
         card.toggleLike();
       })
       .catch(err => console.log(err));
     },
     handleDeleteLike: () => {
-      api.deleteLikeCard(card._id).then(res => {
+      api.deleteLikeCard(card._id)
+      .then(res => {
         card.getCountLikes(res);
         card.toggleLike();
       })
@@ -73,13 +75,13 @@ const userInfo = new UserInfo({
 const popupEditForm = new PopupWithForm('.profile-popup', {
   handlerPopupSubmit: data => {
     popupEditForm.setProcessStatus(true);
-    api.setUserData({name: data.username, about: data.description}).then(data => {
+    api.setUserData({name: data.username, about: data.description})
+    .then(data => {
       userInfo.setUserInfo(data.name, data.about);
+      popupEditForm.close();
     })
     .catch(err => console.log(err))
     .finally(() => popupEditForm.setProcessStatus(false));
-
-    popupEditForm.close();
   }
 });
 
@@ -88,13 +90,13 @@ popupEditForm.setEventListeners();
 const popupEditAvatar = new PopupWithForm('.popup-avatar', {
   handlerPopupSubmit: data => {
     popupEditAvatar.setProcessStatus(true);
-    api.changeAvatar({avatar: data.avatar}).then(data => {
+    api.changeAvatar({avatar: data.avatar})
+    .then(data => {
       userInfo.setUserAvatar(data.avatar);
+      popupEditAvatar.close();
     })
     .catch(err => console.log(err))
     .finally(() => popupEditAvatar.setProcessStatus(false));
-
-    popupEditAvatar.close();
   }
 });
 
@@ -106,11 +108,10 @@ const popupAddForm = new PopupWithForm('.popup-card', {
     api.addNewCard(data)
     .then(data => {
       section.addItem(createCard(data));
+      popupAddForm.close();
     })
     .catch(err => console.log(err))
     .finally(() => popupAddForm.setProcessStatus(false));
-    
-    popupAddForm.close();
   }
 });
 
